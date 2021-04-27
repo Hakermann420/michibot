@@ -1,0 +1,12 @@
+[Unit]
+Description=Michibot Service
+After=multi-user.target
+
+[Service]
+Type=simple
+User=michibot
+ExecStart=/usr/bin/python3 /usr/bin/michibot.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
